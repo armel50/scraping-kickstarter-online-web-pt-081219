@@ -8,25 +8,21 @@ def create_project_hash
   
   projects_array =  kickstarter.css("li.project.grid_4")
   
-  p projects_array.first.css("h2.bbcard_name strong a").text
-  
-  p projects_array.first.css("div.project-thumbnail a img").attribute("src").value
-  p projects_array.first.css("p.bbcard_blurb").text
-  
-  projects_array.first.css("ul.project-stats li.first.funded strong").text
   
   projects_array.each do |el|
     title = el.css("h2.bbcard_name strong a").text 
     img = el.css("div.project-thumbnail a img").attribute("src").value 
     description = el.css("p.bbcard_blurb").text
     location = el.css("ul.project-meta span.location-name").text 
-    stats = el. 
+    stats = el.css("ul.project-stats li.first.funded strong").text.gsub("%","").to_i
     
     projects[title.to_sym] = {
       :image_ling => img,
-      :description => description 
-      :location => 
+      :description => description, 
+      :location => location ,
+      :percent_funded => stats
     }
+    
   end
- 
+ projects
 end

@@ -17,7 +17,7 @@ def create_project_hash
     stats = el.css("ul.project-stats li.first.funded strong").text.gsub("%","").to_i
     
     projects[title.to_sym] = {
-      :image_ling => img,
+      :image_link => img,
       :description => description, 
       :location => location ,
       :percent_funded => stats

@@ -8,7 +8,9 @@ def create_project_hash
   
   projects_array =  kickstarter.css("li.project.grid_4")
   
-  p projects_array.first.css("h2.bbcard_name strong a").text.strip
+  p projects_array.first.css("h2.bbcard_name strong a").text
+  
+  p projects_array.first.css("")
   # projects_array.each do |el|
     
   # end

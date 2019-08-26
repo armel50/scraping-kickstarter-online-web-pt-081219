@@ -11,9 +11,14 @@ def create_project_hash
   
   projects_array.each do |el|
     title = el.css("h2.bbcard_name strong a").text 
+    
     img = el.css("div.project-thumbnail a img").attribute("src").value 
+    p img
+    
     description = el.css("p.bbcard_blurb").text
+    
     location = el.css("ul.project-meta span.location-name").text 
+    
     stats = el.css("ul.project-stats li.first.funded strong").text.gsub("%","").to_i
     
     projects[title.to_sym] = {

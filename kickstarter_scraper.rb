@@ -19,7 +19,8 @@ def create_project_hash
     title = el.css("h2.bbcard_name strong a").text 
     img = el.css("div.project-thumbnail a img").attribute("src").value 
     description = el.css("p.bbcard_blurb").text
-    location = el.css()
+    location = el.css("ul.project-meta span.location-name").text 
+    stats = el. 
     
     projects[title.to_sym] = {
       :image_ling => img,

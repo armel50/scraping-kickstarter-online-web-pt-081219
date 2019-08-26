@@ -8,7 +8,7 @@ def create_project_hash
   
   projects_array =  kickstarter.css(".project.grid_4")
   
-  p projects_array.first.css("a").children.text
+  p projects_array.first.css("a").children[0].text
   # projects_array.each do |el|
     
   # end

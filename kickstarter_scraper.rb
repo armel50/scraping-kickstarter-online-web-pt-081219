@@ -29,5 +29,5 @@ def create_project_hash
     }
     
   end
-p projects
+ projects
 end

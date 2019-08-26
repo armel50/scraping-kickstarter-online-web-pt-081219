@@ -10,7 +10,7 @@ def create_project_hash
   
   p projects_array.first.css("h2.bbcard_name strong a").text
   
-  p projects_array.first.css("div.projec-thumbnail a img").attribute("src").value
+  p projects_array.first.css("div.project-thumbnail a img").attribute("src").value
   # projects_array.each do |el|
     
   # end

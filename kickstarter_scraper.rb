@@ -14,8 +14,8 @@ def create_project_hash
   p projects_array.first.css("p.bbcard_blurb").text
   
   projects_array.first.css("ul.project-stats li.first.funded strong").text
-  # projects_array.each do |el|
+  projects_array.each do |el|
     
-  # end
+  end
  
 end

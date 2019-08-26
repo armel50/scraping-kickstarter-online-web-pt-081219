@@ -13,7 +13,7 @@ def create_project_hash
     title = el.css("h2.bbcard_name strong a").text 
     
     img = el.css("div.project-thumbnail a img").attribute("src").value 
-    p img
+    
     
     description = el.css("p.bbcard_blurb").text
     
